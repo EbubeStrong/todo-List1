@@ -10,18 +10,18 @@ todoContainer.addEventListener("submit", e => {
     const todoValue = todoInput.value;
     // console.log(todoValue)
 
-    if(todoValue){
+    if (todoValue) {
         todoValue;
         getTodo()
-    }else{
+    } else {
         displayError("Please, Enter a Todo-List")
-    //     if(todoValue){
-    //        displayError("")
-    //     }
+        //     if(todoValue){
+        //        displayError("")
+        //     }
     }
 })
 
-function getTodo(){
+function getTodo() {
     const card = document.createElement("div")
     const text = document.createElement("div")
     const taskAdd = document.createElement("p")
@@ -60,14 +60,14 @@ function getTodo(){
     btn.appendChild(button1)
     btn.appendChild(button2)
 
-    
+
     card.appendChild(text)
     card.appendChild(btn)
     cardBox.appendChild(card)
     cardBox.style.display = "flex"
 }
 
-function displayError(message){
+function displayError(message) {
     const errorDisplay = document.createElement("p")
     const card = document.createElement("div")
     errorDisplay.textContent = message
