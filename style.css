@@ -6,6 +6,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 
 h1{
@@ -141,4 +142,10 @@ button[type="submit"]:hover{
     font-weight: bold;
     color: red;
     text-align: center;
+}
+
+@media(max-width:650px){
+    .card-mainContainer{
+        min-width: 200px;
+    }
 }
