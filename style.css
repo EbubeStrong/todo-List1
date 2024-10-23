@@ -73,10 +73,10 @@ button[type="submit"]:hover{
     /* background: linear-gradient(100deg, hsl(0, 8%, 92%), hsl(281, 100%, 75%)); */
     background-color: rgba(0, 0, 0, 0.801);
     padding: 20px 50px 30px 50px;
-    box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.5);
+    box-shadow: 2px 2px 5px 5px hsla(0, 0%, 0%, 0.5);
     /* min-width: 300px; */
     border-radius: 10px;
-    overflow: hidden;
+    overflow-x: scroll;
     /* border: 2px solid rgb(128, 38, 0); */
 }
 
@@ -98,6 +98,7 @@ button[type="submit"]:hover{
     justify-content: space-between;
     padding: 15px;
     border-radius: 10px;
+    width: fit-content;
     /* display: none; */
 }
 
