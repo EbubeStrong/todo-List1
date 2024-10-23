@@ -200,7 +200,8 @@ button[type="submit"]:hover {
   }
 
   .container{
-    max-width: 250px;
+    max-width: 290px;
+    padding-right: 22px;
   }
 
   .todoInput {
