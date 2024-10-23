@@ -39,13 +39,70 @@ function getTodo() {
     button2.textContent = "delete"
     button2.classList.add("delete-btn", "delete-btn:hover")
 
+    // button1.addEventListener("click", () => {
+    //     const newTaskContent = prompt("Edit and enter new task content:");
+    //     const newTaskContentTwo = prompt("Enter new task content:");
+    //     if (newTaskContent !== null) {
+    //         taskAdd.textContent = newTaskContent;
+    //     } else if (newTaskContentTwo === "") {
+    //          taskAdd.textContent = newTaskContentTwo;
+    //     }
+    // });
+
+    // button1.addEventListener("click", () => {
+    //   const newTaskContent = prompt("Edit and enter new task content:");
+      
+    //   if (newTaskContent !== null && newTaskContent.trim() !== "") {
+    //         alert("Enter new task content");
+    //     taskAdd.textContent = newTaskContent;
+    //   }
+    // //   else if (newTaskContent !== null) {
+    // //   }
+    //   else {
+    //     const newTaskContentTwo = prompt("Enter new task content:");
+    //     taskAdd.textContent = newTaskContentTwo
+    //       ? newTaskContentTwo
+    //           : "No content provided.";
+          
+    //       taskAdd.classList.add("red")
+    //   }
+    // });
+
+//    button1.addEventListener("click", () => {
+//      const newTaskContent = prompt("Edit and enter new task content:");
+
+//      if (newTaskContent === null || newTaskContent.trim() === "") {
+//        alert("Please enter a valid task content.");
+//        const newTaskContentTwo = prompt("Enter new task content:");
+
+//        if (newTaskContentTwo && newTaskContentTwo.trim() !== "") {
+//          taskAdd.textContent = newTaskContentTwo;
+//          taskAdd.classList.add("red");
+//        } else {
+//          alert("No content provided. Please try again.");
+//        }
+//      } else {
+//        taskAdd.textContent = newTaskContent;
+//      }
+//    });
+
+
+
     button1.addEventListener("click", () => {
-        const newTaskContent = prompt("Edit and enter new task content:");
-        const newTaskContentTwo = prompt("Enter new task content:");
-        if (newTaskContent !== null) {
-            taskAdd.textContent = newTaskContentTwo;
-        }
+      let newTaskContent = "";
+
+      // Keep prompting until valid input is entered
+      while (newTaskContent === null || newTaskContent.trim() === "") {
+        alert("Please enter a valid task content.");
+        newTaskContent = prompt("Enter new task content:");
+      }
+
+      // Once valid input is provided, update the task and add the class
+      taskAdd.textContent = newTaskContent;
     });
+
+
+
 
     // Add event listener for deleting task
     button2.addEventListener("click", () => {
