@@ -7,12 +7,13 @@ const cardBox = document.querySelector(".card-container");
 todoContainer.addEventListener("submit", e => {
     e.preventDefault();
 
-    const todoValue = todoInput.value;
+    let todoValue = todoInput.value;
     // console.log(todoValue)
 
     if (todoValue) {
-        todoValue;
+        // todoValue 
         getTodo()
+        todoInput.value = ""
     } else {
         displayError("Please, Enter a Todo-List")
         //     if(todoValue){
@@ -37,9 +38,10 @@ function getTodo() {
     button2.classList.add("delete-btn", "delete-btn:hover")
 
     button1.addEventListener("click", () => {
-        const newTaskContent = prompt("Enter new task content:");
+        const newTaskContent = prompt("Edit and enter new task content:");
+        const newTaskContentTwo = prompt("Enter new task content:");
         if (newTaskContent !== null) {
-            taskAdd.textContent = newTaskContent;
+            taskAdd.textContent = newTaskContentTwo;
         }
     });
 

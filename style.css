@@ -1,11 +1,21 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     /* background-color: hsl(0, 0%, 95%); */
-    background: linear-gradient(90deg, rgba(25, 24, 24, 0.295), rgba(128, 0, 128, 0.504));
+    /* background: linear-gradient(90deg, rgba(25, 24, 24, 0.295), rgba(128, 0, 128, 0.504)); */
+    background-color: grey;
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.todoMainContainer{
+    width: 100%;
+    overflow: hidden;
+}
+
+.todoContainer{
+    max-width: 650px;
     overflow: hidden;
 }
 
@@ -13,6 +23,7 @@ h1{
     text-align: center;
     font-size: 45px;
     margin-bottom: 15px;
+    color: black;
 }
 .todoContainer{
     margin-bottom: 20px;
@@ -23,6 +34,7 @@ h1{
     font-size: 1rem;
     font-weight: bold;
     border: 2px solid hsla(0, 0%, 20%, 0.3);
+    outline: none;
     border-radius: 10px;
     width: 250px;
     margin: 10px;
@@ -37,13 +49,15 @@ h1{
     width: 150px;
     margin: 10px;
     color: #fff;
+    color: black;
 }
 
 button[type="submit"]{
     padding: 10px;
     font-weight: bold;
     font-size: 1rem;
-    background-color: hsl(122, 39%, 50%);
+    /* background-color: hsl(122, 39%, 50%); */
+    background-color: black;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -51,15 +65,16 @@ button[type="submit"]{
 }
 
 button[type="submit"]:hover{
-    background-color: hsl(122, 39%, 40%);
+    background-color: hsla(122, 82%, 63%, 0.774);
 }
 
 .card-mainContainer{
     /* background: linear-gradient(100deg, hsl(210, 100%, 75%), hsl(40, 100%, 75%)); */
-    background: linear-gradient(100deg, hsl(0, 8%, 92%), hsl(281, 100%, 75%));
+    /* background: linear-gradient(100deg, hsl(0, 8%, 92%), hsl(281, 100%, 75%)); */
+    background-color: rgba(0, 0, 0, 0.801);
     padding: 20px 50px 30px 50px;
     box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.5);
-    min-width: 300px;
+    /* min-width: 300px; */
     border-radius: 10px;
     overflow: hidden;
     /* border: 2px solid rgb(128, 38, 0); */
@@ -67,7 +82,7 @@ button[type="submit"]:hover{
 
 .card-container{
     /* border: 2px solid green; */
-    min-width: 300px;
+    /* min-width: 300px; */
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -76,7 +91,8 @@ button[type="submit"]:hover{
 
 .container{
     /* border: 2px solid purple; */
-    background-color: purple;
+    /* background-color: purple; */
+    background-color: grey;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -145,7 +161,21 @@ button[type="submit"]:hover{
 }
 
 @media(max-width:650px){
-    .card-mainContainer{
+    /* .card-mainContainer{
         min-width: 200px;
-    }
+    } */
+     .todoContainer{
+        max-width: 450px
+     }
+}
+
+@media(max-width:450px){
+     .todoContainer{
+        max-width: 300px
+     }
+
+     .todoInput{
+    width: 140px;
+    font-size: 0.9rem;
+}
 }
