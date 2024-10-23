@@ -27,6 +27,7 @@ h1{
 }
 .todoContainer{
     margin-bottom: 20px;
+    /* border: 2px solid red; */
 }
 
 .todoInput{
@@ -65,28 +66,36 @@ button[type="submit"]{
 }
 
 button[type="submit"]:hover{
-    background-color: hsla(122, 82%, 63%, 0.774);
+    /* background-color: hsla(122, 82%, 63%, 0.774); */
+    background-color: rgb(58, 72, 78);
+    color: #000;
 }
 
 .card-mainContainer{
     /* background: linear-gradient(100deg, hsl(210, 100%, 75%), hsl(40, 100%, 75%)); */
     /* background: linear-gradient(100deg, hsl(0, 8%, 92%), hsl(281, 100%, 75%)); */
     background-color: rgba(0, 0, 0, 0.801);
-    padding: 20px 50px 30px 50px;
+    /* padding: 20px 50px 30px 50px; */
+    padding: 30px 0;
     box-shadow: 2px 2px 5px 5px hsla(0, 0%, 0%, 0.5);
     /* min-width: 300px; */
     border-radius: 10px;
-    overflow-x: scroll;
+    opacity: 0;
+    visibility: hidden;
+    /* overflow-x: scroll; */
     /* border: 2px solid rgb(128, 38, 0); */
+    /* border: 2px solid green; */
 }
 
 .card-container{
     /* border: 2px solid green; */
+    width:fit-content;
     /* min-width: 300px; */
     display: flex;
     flex-direction: column;
     gap: 20px;
     display: none;
+    margin: 0 auto;
 }
 
 .container{
@@ -98,7 +107,8 @@ button[type="submit"]:hover{
     justify-content: space-between;
     padding: 15px;
     border-radius: 10px;
-    width: fit-content;
+    /* width: fit-content; */
+
     /* display: none; */
 }
 
@@ -161,6 +171,11 @@ button[type="submit"]:hover{
     text-align: center;
 }
 
+.open{
+    opacity: 1;
+    visibility: visible;
+}
+
 @media(max-width:650px){
     /* .card-mainContainer{
         min-width: 200px;
@@ -168,6 +183,9 @@ button[type="submit"]:hover{
      .todoContainer{
         max-width: 450px
      }
+     .card-mainContainer{
+    /* padding: 20px 5px 30px 5px; */
+}
 }
 
 @media(max-width:450px){

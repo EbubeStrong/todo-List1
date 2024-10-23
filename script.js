@@ -9,9 +9,11 @@ todoContainer.addEventListener("submit", e => {
 
     let todoValue = todoInput.value;
     // console.log(todoValue)
+    const hasWord = /[a-zA-Z]/.test(todoValue);
 
-    if (todoValue) {
+    if (todoValue && hasWord) {
         // todoValue 
+        cardMainBox.classList.add('open')
         getTodo()
         todoInput.value = ""
     } else {
