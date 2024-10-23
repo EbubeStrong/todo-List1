@@ -1,205 +1,203 @@
-body{
-    font-family: Arial, Helvetica, sans-serif;
-    /* background-color: hsl(0, 0%, 95%); */
-    /* background: linear-gradient(90deg, rgba(25, 24, 24, 0.295), rgba(128, 0, 128, 0.504)); */
-    background-color: grey;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  /* background-color: hsl(0, 0%, 95%); */
+  /* background: linear-gradient(90deg, rgba(25, 24, 24, 0.295), rgba(128, 0, 128, 0.504)); */
+  background-color: grey;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.todoMainContainer{
-    width: 100%;
-    overflow: hidden;
+.todoMainContainer {
+  width: 100%;
+  overflow: hidden;
 }
 
-.todoContainer{
-    max-width: 650px;
-    overflow: hidden;
+.todoContainer {
+  max-width: 650px;
+  overflow: hidden;
 }
 
-h1{
-    text-align: center;
-    font-size: 45px;
-    margin-bottom: 15px;
-    color: black;
+h1 {
+  text-align: center;
+  font-size: 45px;
+  margin-bottom: 15px;
+  color: black;
 }
-.todoContainer{
-    margin-bottom: 20px;
-    /* border: 2px solid red; */
+.todoContainer {
+  margin-bottom: 20px;
+  /* border: 2px solid red; */
 }
 
-.todoInput{
-    padding: 10px;
-    font-size: 1rem;
-    font-weight: bold;
-    border: 2px solid hsla(0, 0%, 20%, 0.3);
-    outline: none;
-    border-radius: 10px;
-    width: 250px;
-    margin: 10px;
+.todoInput {
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 2px solid hsla(0, 0%, 20%, 0.3);
+  outline: none;
+  border-radius: 10px;
+  width: 250px;
+  margin: 10px;
 }
 
 .todo-value {
-    padding: 5px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    border-radius: 10px;
-    color: black;
-    display: block;  
-    word-wrap: break-word; 
-    max-width: 200px;
+  padding: 5px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 10px;
+  color: black;
+  display: block;
+  word-wrap: break-word;
+  max-width: 200px;
 }
 
-
-button[type="submit"]{
-    padding: 10px;
-    font-weight: bold;
-    font-size: 1rem;
-    /* background-color: hsl(122, 39%, 50%); */
-    background-color: black;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+button[type="submit"] {
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1rem;
+  /* background-color: hsl(122, 39%, 50%); */
+  background-color: black;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-button[type="submit"]:hover{
-    /* background-color: hsla(122, 82%, 63%, 0.774); */
-    background-color: rgb(58, 72, 78);
-    color: #000;
+button[type="submit"]:hover {
+  /* background-color: hsla(122, 82%, 63%, 0.774); */
+  background-color: rgb(58, 72, 78);
+  color: #000;
 }
 
-.card-mainContainer{
-    /* background: linear-gradient(100deg, hsl(210, 100%, 75%), hsl(40, 100%, 75%)); */
-    /* background: linear-gradient(100deg, hsl(0, 8%, 92%), hsl(281, 100%, 75%)); */
-    background-color: rgba(0, 0, 0, 0.801);
-    /* padding: 20px 50px 30px 50px; */
-    padding: 30px;
-    box-shadow: 2px 2px 5px 5px hsla(0, 0%, 0%, 0.5);
-    /* min-width: 300px; */
-    border-radius: 10px;
-    opacity: 0;
-    visibility: hidden;
-    /* overflow-x: scroll; */
-    /* border: 2px solid rgb(128, 38, 0); */
-    /* border: 2px solid green; */
+.card-mainContainer {
+  /* background: linear-gradient(100deg, hsl(210, 100%, 75%), hsl(40, 100%, 75%)); */
+  /* background: linear-gradient(100deg, hsl(0, 8%, 92%), hsl(281, 100%, 75%)); */
+  background-color: rgba(0, 0, 0, 0.801);
+  /* padding: 20px 50px 30px 50px; */
+  padding: 30px;
+  box-shadow: 2px 2px 5px 5px hsla(0, 0%, 0%, 0.5);
+  /* min-width: 300px; */
+  border-radius: 10px;
+  opacity: 0;
+  visibility: hidden;
+  /* overflow-x: scroll; */
+  /* border: 2px solid rgb(128, 38, 0); */
+  /* border: 2px solid green; */
 }
 
-.card-container{
-    /* border: 2px solid green; */
-    /* width:fit-content; */
-    /* min-width: 300px; */
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    display: none;
-    margin: 0 auto;
+.card-container {
+  /* border: 2px solid green; */
+  /* width:fit-content; */
+  /* min-width: 300px; */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  display: none;
+  margin: 0 auto;
 }
 
-.container{
-    /* border: 2px solid purple; */
-    /* background-color: purple; */
-    background-color: grey;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px;
-    border-radius: 10px;
-    /* max-width: 300px; */
-    /* width: fit-content; */
+.container {
+  /* border: 2px solid purple; */
+  /* background-color: purple; */
+  background-color: grey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  border-radius: 10px;
+  /* max-width: 300px; */
+  /* width: fit-content; */
 
-    /* display: none; */
-}
-
-.btn{
-    /* border: 2px solid blue; */
-    display: flex;
-    gap: 10px;
+  /* display: none; */
 }
 
-.errorBtn{
-    /* border: 2px solid blue; */
-    display: flex;
-    gap: 10px;
-    justify-content: flex-end;
+.btn {
+  /* border: 2px solid blue; */
+  display: flex;
+  gap: 10px;
 }
 
-.container button{
-     padding: 10px;
-     border: none;
-     font-weight: bold;
+.errorBtn {
+  /* border: 2px solid blue; */
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
 }
 
-.edit-btn{
-    /* background-color: hsl(120, 100%, 25%); */
-    /* color: #fff; */
-    cursor: pointer;
-}
-.edit-btn:hover{
-    background-color: hsl(120, 100%, 35%);
-    color: #fff;
+.container button {
+  padding: 10px;
+  border: none;
+  font-weight: bold;
 }
 
-.delete-btn{
-    /* background-color: hsl(0, 100%, 45%); */
-    /* color: #fff; */
-    cursor: pointer;
+.edit-btn {
+  cursor: pointer;
 }
-.delete-btn:hover{
-    background-color: hsl(0, 100%, 55%);
-    color: #fff;
+.edit-btn:hover {
+  background-color: hsl(120, 100%, 35%);
+  color: #fff;
 }
 
-.errorDelete-btn{
-    /* background-color: hsl(0, 100%, 45%);
+.delete-btn {
+  /* background-color: hsl(0, 100%, 45%); */
+  /* color: #fff; */
+  cursor: pointer;
+}
+.delete-btn:hover {
+  background-color: hsl(0, 100%, 55%);
+  color: #fff;
+}
+
+.errorDelete-btn {
+  /* background-color: hsl(0, 100%, 45%);
     color: #fff; */
-    cursor: pointer;
-    padding: 15px;
-    border: none;
+  cursor: pointer;
+  padding: 15px;
+  border: none;
 }
 
-.errorDelete-btn:hover{
-    color: #fff;
-    background-color: hsl(0, 100%, 45%);
+.errorDelete-btn:hover {
+  color: #fff;
+  background-color: hsl(0, 100%, 45%);
 }
 
-.errorDisplay{
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: red;
-    text-align: center;
+.errorDisplay {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: red;
+  text-align: center;
 }
 
-.red{
-    color: red;
+.red {
+  color: red;
 }
 
-.open{
-    opacity: 1;
-    visibility: visible;
+.open {
+  opacity: 1;
+  visibility: visible;
 }
 
-@media(max-width:650px){
-    /* .card-mainContainer{
+@media (max-width: 650px) {
+  /* .card-mainContainer{
         min-width: 200px;
     } */
-     .todoContainer{
-        max-width: 450px
-     }
-     .card-mainContainer{
-    /* padding: 20px 5px 30px 5px; */
-}
+  .todoContainer {
+    max-width: 450px;
+  }
 }
 
-@media(max-width:450px){
-     .todoContainer{
-        max-width: 300px
-     }
+@media (max-width: 450px) {
+  .todoContainer {
+    max-width: 300px;
+  }
 
-     .todoInput{
+  .todoInput {
     width: 140px;
     font-size: 0.9rem;
-}
+  }
+
+  .todo-value {
+    max-width: 100px;
+  }
 }
